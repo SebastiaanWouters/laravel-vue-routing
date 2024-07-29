@@ -1,7 +1,11 @@
 <script setup>
     import { ref } from "vue"
-import { useGlobalCounter } from "../store";
-    console.log('Hello from counter')
+    import { useGlobalCounter } from "../store";
+
+    const props = defineProps({
+        message: { default: 'Hello Vue!' }
+    })
+
     const counter = ref(0);
     const globalCounter = useGlobalCounter()
 </script>
@@ -15,4 +19,5 @@ import { useGlobalCounter } from "../store";
     <button @click="globalCounter++">Increment</button>
     <button @click="globalCounter--">Decrement</button>
     <p>{{globalCounter}}</p>
+    <p>{{props.message}}</p>
 </template>
