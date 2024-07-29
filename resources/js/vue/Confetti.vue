@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <ConfettiExplosion />
+    <div style="display: flex; justify-content: center;">
+        <ConfettiExplosion />
+    </div>
 </template>

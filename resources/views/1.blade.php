@@ -1,7 +1,7 @@
 <x-layouts.app :title="$title">
     <p>1</p>
-    <div id="vue-app">
-        <vue-counter></vue-counter>
-    </div>
+    <script>var vueComponent = "vue-counter"</script>
+    <div id="vue-app"></div>
+
 </x-layouts.app>
 
