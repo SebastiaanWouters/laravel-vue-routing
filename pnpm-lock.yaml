@@ -17,6 +17,9 @@ importers:
       vue:
         specifier: ^3.4.34
         version: 3.4.34
+      vue-confetti-explosion:
+        specifier: ^1.0.2
+        version: 1.0.2(vue@3.4.34)
     devDependencies:
       axios:
         specifier: ^1.6.4
@@ -435,6 +438,12 @@ packages:
       terser:
         optional: true
 
+  vue-confetti-explosion@1.0.2:
+    resolution: {integrity: sha512-80OboM3/6BItIoZ6DpNcZFqGpF607kjIVc5af56oKgtFmt5yWehvJeoYhkzYlqxrqdBe0Ko4Ie3bWrmLau+dJw==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.0.5
+
   vue@3.4.34:
     resolution: {integrity: sha512-VZze05HWlA3ItreQ/ka7Sx7PoD0/3St8FEiSlSTVgb6l4hL+RjtP2/8g5WQBzZgyf8WG2f+g1bXzC7zggLhAJA==}
     peerDependencies:
@@ -766,6 +775,10 @@ snapshots:
       rollup: 4.19.1
     optionalDependencies:
       fsevents: 2.3.3
+
+  vue-confetti-explosion@1.0.2(vue@3.4.34):
+    dependencies:
+      vue: 3.4.34
 
   vue@3.4.34:
     dependencies:
