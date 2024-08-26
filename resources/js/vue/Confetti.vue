@@ -11,7 +11,7 @@
 
 <template>
     <div style="display: flex; justify-content: center;">
-        <ConfettiExplosion />
+        <ConfettiExplosion stageHeight="620" />
     </div>
     <div style="font-weight: 800; margin-block: 1rem;">Vue Global Counter</div>
     <button @click="globalCounter++">Increment</button>
