@@ -3,5 +3,5 @@
 </script>
 
 <template>
-  <ConfettiExplosion />
+  <ConfettiExplosion stageHeight="720" />
 </template>
