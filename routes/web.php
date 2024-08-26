@@ -1,23 +1,11 @@
 <?php
 
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\View;
+use App\Helpers\Boosted;
 use Illuminate\Http\Request;
-
-$title = "ss";
+use Illuminate\Support\Facades\Route;
 
 Route::get('/1', function (Request $request) {
-    // Check for 'boosted' header
-    if ($request->header('boosted')) {
-        return response([
-            'name' => 'vue-counter',
-            'props' => ['message' => 'Hello From Server (Route 1)'],
-        ], 200);
-    }
-
-    // Original logic if 'boosted' header is not present
-    return view('1', ['title' => '1']);
+    return Boosted::render($request, '1', ['title' => '1'], 'vue-counter', ['message' => 'Hello From Server (Route 1)']);
 });
 
 Route::get('/', function () {
@@ -25,16 +13,7 @@ Route::get('/', function () {
 });
 
 Route::get('/2', function (Request $request) {
-    // Check for 'boosted' header
-    if ($request->header('boosted')) {
-        return response([
-            'name' => 'vue-confetti',
-            'props' => ['message' => 'Hello From Server (Route 2)'],
-        ], 200);
-    }
-
-    // Original logic if 'boosted' header is not present
-    return view('2');
+    return Boosted::render($request, '2', ['title' => '2'], 'vue-confetti', ['message' => 'Hello From Server (Route 2)']);
 });
 
 
