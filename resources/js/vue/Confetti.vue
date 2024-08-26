@@ -4,6 +4,6 @@
 
 <template>
     <div style="display: flex; justify-content: center;">
-        <ConfettiExplosion />
+        <ConfettiExplosion :stageHeight="620" />
     </div>
 </template>
