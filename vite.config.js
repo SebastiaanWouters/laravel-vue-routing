@@ -10,6 +10,12 @@ export default defineConfig({
         }),
         vuePlugin()
     ],
+     server: {
+        host: '100.86.47.120',
+        hmr: {
+            host: '100.86.47.120'
+        }
+    },
     resolve: {
         alias: {
             "vue": "vue/dist/vue.esm-bundler.js"
